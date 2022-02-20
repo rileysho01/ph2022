@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+   <title>Sprite World!</title>
+   <link rel='stylesheet' href='zombieSpriteStyle.css'/>
+  </head>
+  <body>
+    <h2>Take care of your Zombie Sprite!</h2>
+    <p>Below, you can check off all of the different tasks that the sprite
+      must complete to stay happy and healthy!</p>
+      <p>In order to check these off,
+      though, you must complete them first! Take care of yourself to take care of your sprite!</p>
+    <img src='links-and-images/Zombie sprite.png' width='200'/>
+    <hr/>
+    <h4>Tasks to complete for yourself (and your sprite!)</h4>
+    <input type="checkbox" id="zombie1" name="vehicle1" value="Water">
+    <label for="zombie1"> Drink 64oz. of water</label><br>
+    <input type="checkbox" id="zombie2" name="vehicle2" value="Sleep">
+    <label for="zombie2"> Sleep for at least 8 hours</label><br>
+    <input type="checkbox" id="zombie3" name="vehicle3" value="Clean">
+    <label for="zombie3"> Clean room for fifteen minutes</label><br>
+    <input type="checkbox" id="zombie4" name="vehicle3" value="Add">
+    <label for="zombie4"><input type="text" id="name" name="name" required
+       minlength="0" maxlength="50" size="20"></label><br>
+       <br>
+         <button type="button" onClick="save()">save</button>
+       <script>
+       function save() {
+         var checkbox = document.getElementById("zombie1");
+         localStorage.setItem("zombie1", checkbox.checked);
+         var checkbox = document.getElementById("zombie2");
+         localStorage.setItem("zombie2", checkbox.checked);
+         var checkbox = document.getElementById("zombie3");
+         localStorage.setItem("zombie3", checkbox.checked);
+         var checkbox = document.getElementById("zombie4");
+         localStorage.setItem("zombie4", checkbox.checked);
+       }
+
+       var checked = JSON.parse(localStorage.getItem("zombie1"));
+       document.getElementById("zombie1").checked = checked;
+       var checked = JSON.parse(localStorage.getItem("zombie2"));
+       document.getElementById("zombie2").checked = checked;
+       var checked = JSON.parse(localStorage.getItem("zombie3"));
+       document.getElementById("zombie3").checked = checked;
+       var checked = JSON.parse(localStorage.getItem("zombie4"));
+       document.getElementById("zombie4").checked = checked;
+       </script>
+       <br>
+       <br>
+       <hr/>
+          <h4 class='centerLetter'><a href='demo.html'
+              >Back</a></h4>
+  </body>
+</html>

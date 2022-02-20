@@ -1,0 +1,63 @@
+body {
+  background-color: #C6E0BB;
+  color: #84957C;
+}
+
+#namesBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+h1 {
+  font-family: Helvetica;
+}
+
+h2 {
+  font-family: Helvetica;
+}
+
+h3 {
+  font-family: Helvetica;
+}
+
+h4 {
+  font-family: Helvetica;
+}
+
+h5 {
+  font-family: Helvetica;
+}
+
+p {
+  font-family: Helvetica;
+}
+
+li {
+  font-family: Helvetica;
+}
+
+ul {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.centerLetter {
+  text-align: center;
+}
+
+textarea {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

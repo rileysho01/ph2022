@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+   <title>Sprite World!</title>
+   <link rel='stylesheet' href='natureSpriteStyle.css'/>
+  </head>
+  <body>
+    <h2>Take care of your Nature Sprite!</h2>
+    <p>Below, you can check off all of the different tasks that the sprite
+      must complete to stay happy and healthy!</p>
+      <p>In order to check these off,
+      though, you must complete them first! Take care of yourself to take care of your sprite!</p>
+    <img src='links-and-images/sprite 3.png' width='200'/>
+    <hr/>
+    <h4>Tasks to complete for yourself (and your sprite!)</h4>
+    <input type="checkbox" id="n1" name="n1" value="Water">
+    <label for="n1"> Drink 64oz. of water</label><br>
+    <input type="checkbox" id="n2" name="n2" value="Sleep">
+    <label for="n2"> Sleep for at least 8 hours</label><br>
+    <input type="checkbox" id="n3" name="n3" value="Outside">
+    <label for="n3"> Spend 30 minutes outside today!</label><br>
+    <input type="checkbox" id="n4" name="n4" value="Add">
+    <label for="n4"><input type="text" id="name" name="name" required
+       minlength="0" maxlength="50" size="20"></label><br>
+       <br>
+         <button type="button" onClick="save()">save</button>
+       <script>
+       function save() {
+         var checkbox = document.getElementById("n1");
+         localStorage.setItem("n1", checkbox.checked);
+         var checkbox = document.getElementById("n2");
+         localStorage.setItem("n2", checkbox.checked);
+         var checkbox = document.getElementById("n3");
+         localStorage.setItem("n3", checkbox.checked);
+         var checkbox = document.getElementById("n4");
+         localStorage.setItem("n4", checkbox.checked);
+       }
+
+       var checked = JSON.parse(localStorage.getItem("n1"));
+       document.getElementById("n1").checked = checked;
+       var checked = JSON.parse(localStorage.getItem("n2"));
+       document.getElementById("n2").checked = checked;
+       var checked = JSON.parse(localStorage.getItem("n3"));
+       document.getElementById("n3").checked = checked;
+       var checked = JSON.parse(localStorage.getItem("n4"));
+       document.getElementById("n4").checked = checked;
+       </script>
+    <br>
+    <br>
+    <hr/>
+       <h4 class='centerLetter'><a href='demo.html'
+          >Back</a></h4>
+
+  </body>
+</html>
